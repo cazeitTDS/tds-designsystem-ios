@@ -1,3 +1,3 @@
-# tds-designsystem-ios
+# TDSDesignSystem
 
 A description of this package.
