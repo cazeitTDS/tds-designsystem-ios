@@ -1,0 +1,48 @@
+{
+    "default-style": {
+        "foreground-color": {
+            "hex": "#000000"
+        },
+        "background-color": {
+            "hex": "#00000000"
+        },
+        "corner-radius": 0,
+        "text-alignment" : "center",
+        "border": {
+            "color": {
+                "hex": "#00000000"
+            },
+            "width": 0,
+            "corner-radius": 0
+        },
+        "font": {
+            "size": 14,
+            "weight": "medium",
+            "name": null,
+            "letter-spacing": 0,
+            "line-height": 0
+        },
+        "padding": {
+            "top": 0,
+            "left": 0,
+            "right": 0,
+            "bottom": 0
+        },
+        "margin": {
+            "top": 0,
+            "left": 0,
+            "right": 0,
+            "bottom": 0
+        },
+        "shadow": {
+            "color": {
+                "hex": "#00000000"
+            },
+            "radius": 0,
+            "offset": {
+                "horizontal": 0,
+                "vertical": 0
+            }
+        }
+    }
+}
