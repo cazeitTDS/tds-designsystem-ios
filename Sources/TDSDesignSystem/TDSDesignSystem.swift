@@ -30,12 +30,14 @@ public class TDSDesignSystem {
      Recommended: AppDelegate.didFinishLaunchingWithOptions
      */
     public func setup() {
-        guard let config: TDSDesignSystemConfig = ResourceManager.sharedInstance.loadFromFile(TDSDesignSystemDefines.configFileName) else {
-            TDLogError("Error loading config file for design system. Styled elements may look different.")
-            return
+        var configuration: TDSDesignSystemConfig?
+        
+        configuration = ResourceManager.sharedInstance.loadFromFile(TDSDesignSystemDefines.configFileName)
+        if configuration == nil {
+            configuration = ResourceManager.sharedInstance.loadFromFile(TDSDesignSystemDefines.configFileFallbackName)
         }
         
-        self.configuration = config
+        self.configuration = configuration
     }
     
     /**

@@ -24,7 +24,7 @@ class ResourceManager {
         return decoder
     }()
     
-    private var bundles: [Bundle] = [TDSDesignSystemDefines.mainBundle, TDSDesignSystemDefines.bundle]
+    private var bundles: [Bundle] = [TDSDesignSystemDefines.mainBundle]
     
     // MARK: - Public API
     
@@ -33,7 +33,6 @@ class ResourceManager {
      The search order will always be:
         1. Main Bundle of caller
         2. Inserted Bundles in reverse order of insertion (last insertion == highest priority)
-        3. Framework Bundle
      
      */
     func registerBundle(_ bundle: Bundle) {
