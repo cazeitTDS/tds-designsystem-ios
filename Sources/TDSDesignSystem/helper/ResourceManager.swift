@@ -24,7 +24,7 @@ class ResourceManager {
         return decoder
     }()
     
-    private var bundles: [Bundle] = [TDSDesignSystemDefines.mainBundle]
+    private var bundles: [Bundle] = [TDSDesignSystemDefines.mainBundle, Bundle.module]
     
     // MARK: - Public API
     

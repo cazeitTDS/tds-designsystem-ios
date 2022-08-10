@@ -22,8 +22,4 @@ class TDSDesignSystemDefines {
     static var configFileName: String {
         return "designsystem-config"
     }
-    
-    static var configFileFallbackName: String {
-        return "designsystem-config-fallback"
-    }
 }

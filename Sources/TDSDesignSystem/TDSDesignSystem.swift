@@ -33,9 +33,6 @@ public class TDSDesignSystem {
         var configuration: TDSDesignSystemConfig?
         
         configuration = ResourceManager.sharedInstance.loadFromFile(TDSDesignSystemDefines.configFileName)
-        if configuration == nil {
-            configuration = ResourceManager.sharedInstance.loadFromFile(TDSDesignSystemDefines.configFileFallbackName)
-        }
         
         self.configuration = configuration
     }
