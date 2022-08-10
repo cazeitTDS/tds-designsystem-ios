@@ -53,6 +53,7 @@ class ResourceManager {
         }
         catch let error {
             TDLogError("Unable to parse style for \"\(name)\" with error: \(error)")
+            return nil
         }
         
         return retVal
