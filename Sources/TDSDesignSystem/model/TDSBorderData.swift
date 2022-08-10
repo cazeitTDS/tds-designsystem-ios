@@ -27,6 +27,8 @@ public struct TDSBorderData: Codable {
     
     // MARK: - Public API
     
+    public init() {}
+    
     public init(color: TDSColor,
                 width: CGFloat = 0,
                 cornerRadius: CGFloat = 0) {
