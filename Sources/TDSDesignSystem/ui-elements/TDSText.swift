@@ -38,6 +38,16 @@ public struct TDSText: View {
         self.fixedHorizontalSize = fixedHorizontalSize
         self.fixedVerticalSize = fixedVerticalSize
     }
+    
+    public init(_ text: String,
+                styleStateSet: TDSStyleStateSet,
+                fixedHorizontalSize: Bool = false,
+                fixedVerticalSize: Bool = false) {
+        self.init(text,
+                  style: styleStateSet.default,
+                  fixedHorizontalSize: fixedHorizontalSize,
+                  fixedVerticalSize: fixedVerticalSize)
+    }
 }
 
 struct TDSText_Previews: PreviewProvider {

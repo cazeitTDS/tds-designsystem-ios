@@ -24,4 +24,14 @@ public struct TDSBorderData: Codable {
     public fileprivate(set) var color: TDSColor = TDSColor.clear
     public fileprivate(set) var width: CGFloat = 0
     public fileprivate(set) var cornerRadius: CGFloat = 0
+    
+    // MARK: - Public API
+    
+    public init(color: TDSColor,
+                width: CGFloat = 0,
+                cornerRadius: CGFloat = 0) {
+        self.color = color
+        self.width = width
+        self.cornerRadius = cornerRadius
+    }
 }

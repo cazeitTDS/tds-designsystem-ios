@@ -26,7 +26,7 @@ public struct TDSShadow: Codable {
     
     // MARK: - Public API
     
-    init(color: TDSColor,
+    public init(color: TDSColor,
          radius: CGFloat,
          offset: TDSOffset) {
         self.color = color

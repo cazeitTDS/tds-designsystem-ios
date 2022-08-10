@@ -54,4 +54,18 @@ public struct TDSFontData: Codable {
     
     public fileprivate(set) var letterSpacing: CGFloat = 0
     public fileprivate(set) var lineHeight: CGFloat = 0
+    
+    // MARK: - Public API
+    
+    public init(size: CGFloat,
+                weight: TDSFontWeight,
+                name: String? = nil,
+                letterSpacing: CGFloat = 0,
+                lineHeight: CGFloat = 0) {
+        self.size = size
+        self.weight = weight
+        self.name = name
+        self.letterSpacing = letterSpacing
+        self.lineHeight = lineHeight
+    }
 }
