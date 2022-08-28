@@ -96,8 +96,6 @@ public class Appearance {
         public static let primary200 = TDSColor(hex: "#a3f2ea")
         public static let primary100 = TDSColor(hex: "#e0fbf8")
         public static let primary50 = TDSColor(hex: "#f2fdfc")
-        public static let coolGray100 = TDSColor(hex: "#f3f4f6")
-        public static let coolGray50 = TDSColor(hex: "#f9fafb")
     }
 
     // MARK: - Texts
@@ -301,51 +299,6 @@ public class Appearance {
     }
    
     lazy var caption2Regular: TDSStyleStateSet {
-        let fontWeight = TDSFontWeight(figmaString: "Regular")
-        let fontData = TDSFontData(size: 11, weight: fontWeight, letterSpacing: 0.07, lineHeight: 13)
-
-        let style = TDSStyle(fontData: fontData)
-
-        return TDSStyleStateSet(value: style)
-    }
-   
-    lazy var headline1: TDSStyleStateSet {
-        let fontWeight = TDSFontWeight(figmaString: "Semibold")
-        let fontData = TDSFontData(size: 13, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
-
-        let style = TDSStyle(fontData: fontData)
-
-        return TDSStyleStateSet(value: style)
-    }
-   
-    lazy var title2: TDSStyleStateSet {
-        let fontWeight = TDSFontWeight(figmaString: "Regular")
-        let fontData = TDSFontData(size: 15, weight: fontWeight, letterSpacing: 0.35, lineHeight: 28)
-
-        let style = TDSStyle(fontData: fontData)
-
-        return TDSStyleStateSet(value: style)
-    }
-   
-    lazy var title1: TDSStyleStateSet {
-        let fontWeight = TDSFontWeight(figmaString: "Regular")
-        let fontData = TDSFontData(size: 16, weight: fontWeight, letterSpacing: 0.36, lineHeight: 34)
-
-        let style = TDSStyle(fontData: fontData)
-
-        return TDSStyleStateSet(value: style)
-    }
-   
-    lazy var caption1: TDSStyleStateSet {
-        let fontWeight = TDSFontWeight(figmaString: "Regular")
-        let fontData = TDSFontData(size: 12, weight: fontWeight, letterSpacing: 0, lineHeight: 16)
-
-        let style = TDSStyle(fontData: fontData)
-
-        return TDSStyleStateSet(value: style)
-    }
-   
-    lazy var caption2: TDSStyleStateSet {
         let fontWeight = TDSFontWeight(figmaString: "Regular")
         let fontData = TDSFontData(size: 11, weight: fontWeight, letterSpacing: 0.07, lineHeight: 13)
 
