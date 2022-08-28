@@ -35,6 +35,22 @@ public struct TDSButton: View {
         Button("", action: action)
             .buttonStyle(buttonStyle)
     }
+    
+    // MARK: - Public API
+    
+    public init(title: String,
+                styleStateSet: TDSStyleStateSet,
+                iconData: TDSIconData? = nil,
+                iconPosition: TDSIconPosition? = nil,
+                iconInsets: TDSEdgeInsets = TDSEdgeInsets(value: 0),
+                action: (@escaping () -> Void) = {}) {
+        self.title = title
+        self.styleStateSet = styleStateSet
+        self.iconData = iconData
+        self.iconPosition = iconPosition
+        self.iconInsets = iconInsets
+        self.action = action
+    }
 }
 
 fileprivate struct TDSButtonStyle: ButtonStyle {

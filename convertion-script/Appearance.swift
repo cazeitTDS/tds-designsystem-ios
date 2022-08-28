@@ -266,7 +266,7 @@ public class Appearance {
         }
    
         public static var headlineRegular: TDSStyleStateSet {
-            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
             let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
 
             let style = TDSStyle(tdsFont: fontData)

@@ -38,6 +38,28 @@ public struct TDSIcon: View {
                    height: iconData.height)
             .styleView(style)
     }
+    
+    // MARK: - Public API
+    
+    public init(iconData: TDSIconData,
+                styleStateSet: TDSStyleStateSet,
+                contentMode: ContentMode = .fit,
+                renderingMode: Image.TemplateRenderingMode = .template) {
+        self.init(iconData: iconData,
+                  style: styleStateSet.default,
+                  contentMode: contentMode,
+                  renderingMode: renderingMode)
+    }
+    
+    public init(iconData: TDSIconData,
+                style: TDSStyle,
+                contentMode: ContentMode = .fit,
+                renderingMode: Image.TemplateRenderingMode = .template) {
+        self.iconData = iconData
+        self.style = style
+        self.contentMode = contentMode
+        self.renderingMode = renderingMode
+    }
 }
 
 struct TDSIcon_Previews: PreviewProvider {
