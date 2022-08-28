@@ -59,7 +59,8 @@ class TestValues {
     private static var buttonStyle: TDSStyle {
         let border = TDSBorderData(color: TDSColor.black,
                                width: 2,
-                               cornerRadius: 5)
+                               cornerRadius: 5,
+                                   insets: TDSEdgeInsets(value: -2))
         
         let font = TDSFontData(size: 20,
                            weight: .medium)

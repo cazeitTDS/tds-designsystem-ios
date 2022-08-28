@@ -26,6 +26,7 @@ extension View {
             .lineLimit(style.maxTextLines)
             .padding(style.padding.edgeInsets)
             .background(background)
+            .padding(style.border.insets.edgeInsets)
             .overlay(overlay)
             .padding(style.margin.edgeInsets)
     }
