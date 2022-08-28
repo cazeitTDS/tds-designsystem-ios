@@ -30,7 +30,7 @@ function addObjectToTemplate(object, objectName, tokensObject, templateString) {
     switch (object.type) {
         case "typography":
             stringToInsert = buildSwiftStringForTemplateWithPropertyLookup(object, objectName, tokensObject, "Templates/TextTemplate.swift");
-            searchString = "// MARK: - Texts";
+            searchString = "public class Text {";
             break;
 
         case "color":

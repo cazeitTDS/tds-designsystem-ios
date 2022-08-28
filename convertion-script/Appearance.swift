@@ -100,211 +100,214 @@ public class Appearance {
     }
 
     // MARK: - Texts
+
+    public class Text {
    
-    lazy var button: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 13, weight: fontWeight, letterSpacing: -0.08, lineHeight: 18)
+        public static var button: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 13, weight: fontWeight, letterSpacing: -0.08, lineHeight: 18)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var largeTitleSemibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Bold")
-        let fontData = TDSFontData(size: 34, weight: fontWeight, letterSpacing: 0.37, lineHeight: 41)
+        public static var largeTitleSemibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Bold")
+            let fontData = TDSFontData(size: 34, weight: fontWeight, letterSpacing: 0.37, lineHeight: 41)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var title1Semibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Bold")
-        let fontData = TDSFontData(size: 28, weight: fontWeight, letterSpacing: 0.36, lineHeight: 34)
+        public static var title1Semibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Bold")
+            let fontData = TDSFontData(size: 28, weight: fontWeight, letterSpacing: 0.36, lineHeight: 34)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var title2Semibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Bold")
-        let fontData = TDSFontData(size: 22, weight: fontWeight, letterSpacing: 0.35, lineHeight: 28)
+        public static var title2Semibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Bold")
+            let fontData = TDSFontData(size: 22, weight: fontWeight, letterSpacing: 0.35, lineHeight: 28)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var title3Semibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 20, weight: fontWeight, letterSpacing: 0.38, lineHeight: 24)
+        public static var title3Semibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 20, weight: fontWeight, letterSpacing: 0.38, lineHeight: 24)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var headlineSemibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
+        public static var headlineSemibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var bodySemibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
+        public static var bodySemibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var calloutSemibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 16, weight: fontWeight, letterSpacing: -0.32, lineHeight: 21)
+        public static var calloutSemibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 16, weight: fontWeight, letterSpacing: -0.32, lineHeight: 21)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var subheadlineSemibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 15, weight: fontWeight, letterSpacing: -0.5, lineHeight: 20)
+        public static var subheadlineSemibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 15, weight: fontWeight, letterSpacing: -0.5, lineHeight: 20)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var footnoteSemibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 13, weight: fontWeight, letterSpacing: -0.08, lineHeight: 18)
+        public static var footnoteSemibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 13, weight: fontWeight, letterSpacing: -0.08, lineHeight: 18)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var caption1Semibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Medium")
-        let fontData = TDSFontData(size: 12, weight: fontWeight, letterSpacing: 0, lineHeight: 16)
+        public static var caption1Semibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Medium")
+            let fontData = TDSFontData(size: 12, weight: fontWeight, letterSpacing: 0, lineHeight: 16)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var caption2Semibold: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 11, weight: fontWeight, letterSpacing: 0.06, lineHeight: 13)
+        public static var caption2Semibold: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 11, weight: fontWeight, letterSpacing: 0.06, lineHeight: 13)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var largeTitleRegular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 34, weight: fontWeight, letterSpacing: 0.37, lineHeight: 41)
+        public static var largeTitleRegular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 34, weight: fontWeight, letterSpacing: 0.37, lineHeight: 41)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var title3Regular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 20, weight: fontWeight, letterSpacing: 0.38, lineHeight: 24)
+        public static var title3Regular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 20, weight: fontWeight, letterSpacing: 0.38, lineHeight: 24)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var bodyRegular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
+        public static var bodyRegular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var calloutRegular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 16, weight: fontWeight, letterSpacing: -0.32, lineHeight: 21)
+        public static var calloutRegular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 16, weight: fontWeight, letterSpacing: -0.32, lineHeight: 21)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var subheadlineRegular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 15, weight: fontWeight, letterSpacing: -0.24, lineHeight: 20)
+        public static var subheadlineRegular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 15, weight: fontWeight, letterSpacing: -0.24, lineHeight: 20)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var footnoteRegular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 13, weight: fontWeight, letterSpacing: -0.08, lineHeight: 18)
+        public static var footnoteRegular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 13, weight: fontWeight, letterSpacing: -0.08, lineHeight: 18)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var headlineRegular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
-        let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
+        public static var headlineRegular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Semibold")
+            let fontData = TDSFontData(size: 17, weight: fontWeight, letterSpacing: -0.41, lineHeight: 22)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var title2Regular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 22, weight: fontWeight, letterSpacing: 0.35, lineHeight: 28)
+        public static var title2Regular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 22, weight: fontWeight, letterSpacing: 0.35, lineHeight: 28)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var title1Regular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 28, weight: fontWeight, letterSpacing: 0.36, lineHeight: 34)
+        public static var title1Regular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 28, weight: fontWeight, letterSpacing: 0.36, lineHeight: 34)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var caption1Regular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 12, weight: fontWeight, letterSpacing: 0, lineHeight: 16)
+        public static var caption1Regular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 12, weight: fontWeight, letterSpacing: 0, lineHeight: 16)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
    
-    lazy var caption2Regular: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString("Regular")
-        let fontData = TDSFontData(size: 11, weight: fontWeight, letterSpacing: 0.07, lineHeight: 13)
+        public static var caption2Regular: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString("Regular")
+            let fontData = TDSFontData(size: 11, weight: fontWeight, letterSpacing: 0.07, lineHeight: 13)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
+    }
 }

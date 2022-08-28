@@ -15,4 +15,7 @@ public class Appearance {
     }
 
     // MARK: - Texts
+
+    public class Text {
+    }
 }

@@ -1,9 +1,9 @@
    
-    lazy var #variableName: TDSStyleStateSet = {
-        let fontWeight = TDSFontWeight.fromFigmaString(#fontWeight)
-        let fontData = TDSFontData(size: #fontSize, weight: fontWeight, letterSpacing: #letterSpacing, lineHeight: #lineHeight)
+        public static var #variableName: TDSStyleStateSet {
+            let fontWeight = TDSFontWeight.fromFigmaString(#fontWeight)
+            let fontData = TDSFontData(size: #fontSize, weight: fontWeight, letterSpacing: #letterSpacing, lineHeight: #lineHeight)
 
-        let style = TDSStyle(tdsFont: fontData)
+            let style = TDSStyle(tdsFont: fontData)
 
-        return TDSStyleStateSet(value: style)
-    }()
+            return TDSStyleStateSet(value: style)
+        }
