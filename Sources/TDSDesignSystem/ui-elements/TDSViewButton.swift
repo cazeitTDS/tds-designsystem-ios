@@ -31,7 +31,7 @@ public struct TDSViewButton<Content: View>: View {
     // MARK: - Public API
     
     public init(content: Content,
-                action: () -> () = {},
+                action: @escaping () -> () = {},
                 styleStateSet: TDSStyleStateSet) {
         self.content = content
         self.action = action
