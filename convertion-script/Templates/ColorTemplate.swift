@@ -1,1 +1,1 @@
-        public static let #variableName = TDSColor(hex: #variableValue)
+        public static let #variableName = TDSColor(hexValue: #variableValue)
