@@ -12,14 +12,19 @@ public struct TDSViewButton<Content: View>: View {
     // MARK: - Properties
     
     public var content: Content
+    public var action: () -> () = {}
     public var styleStateSet: TDSStyleStateSet
     @Environment(\.isEnabled) private var isEnabled
     
     // MARK: - Body
     
     public var body: some View {
-        content
-            .buttonStyle(TDSViewButtonStyle(styleStateSet: styleStateSet,
+        Button (action: {
+            action()
+        }, label: {
+            content
+        })
+        .buttonStyle(TDSViewButtonStyle(styleStateSet: styleStateSet,
                                             isEnabled: isEnabled))
     }
 }
