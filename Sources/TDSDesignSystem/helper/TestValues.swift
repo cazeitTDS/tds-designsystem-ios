@@ -70,6 +70,7 @@ class TestValues {
         
         return TDSStyle(foregroundColor: TDSColor(hexValue: "#8B0000"),
                         backgroundColor: TDSColor(hexValue: "#F1EB9C"),
+                        cornerRadius: 5,
                         padding: TDSEdgeInsets(value: 15),
                         border: border,
                         tdsFont: font,

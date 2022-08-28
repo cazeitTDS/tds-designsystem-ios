@@ -14,7 +14,7 @@ extension View {
             .stroke(style.border.color.colorNotNil,
                     lineWidth: style.border.width)
             
-        let background = RoundedRectangle(cornerRadius: style.border.cornerRadius)
+        let background = RoundedRectangle(cornerRadius: style.cornerRadius)
             .fill(style.backgroundColor.colorNotNil)
             .shadow(color: style.shadow.color.colorNotNil,
                     radius: style.shadow.radius,
@@ -24,7 +24,6 @@ extension View {
         return self.foregroundColor(style.foregroundColor.colorNotNil)
             .multilineTextAlignment(style.textAlignment.textAlignment)
             .lineLimit(style.maxTextLines)
-            .cornerRadius(style.cornerRadius)
             .padding(style.padding.edgeInsets)
             .background(background)
             .overlay(overlay)
