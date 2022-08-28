@@ -28,6 +28,7 @@ extension View {
             .background(background)
             .padding(style.border.insets.edgeInsets)
             .overlay(overlay)
+            .padding(-style.border.insets.edgeInsets)
             .padding(style.margin.edgeInsets)
     }
     
