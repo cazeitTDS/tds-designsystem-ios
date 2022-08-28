@@ -89,4 +89,26 @@ public struct TDSStyleStateSet: Codable {
         
         return retVal
     }
+    
+    public func combine(withSet styleStateSet: TDSStyleStateSet?) -> TDSStyleStateSet {
+        let `default` = self.default.combine(with: styleStateSet?.default)
+        let pressed = self.pressed.combine(with: styleStateSet?.pressed)
+        let disabled = self.disabled.combine(with: styleStateSet?.disabled)
+        let focused = self.focused.combine(with: styleStateSet?.focused)
+        
+        return TDSStyleStateSet(default: `default`,
+                                pressed: pressed,
+                                disabled: disabled,
+                                focused: focused)
+    }
+    
+    public func combine(with style: TDSStyle?) -> TDSStyleStateSet {
+        guard let style = style else {
+            return self.combine(withSet: nil)
+        }
+        
+        let styleStateSet = TDSStyleStateSet(value: style)
+        
+        return self.combine(withSet: styleStateSet)
+    }
 }
