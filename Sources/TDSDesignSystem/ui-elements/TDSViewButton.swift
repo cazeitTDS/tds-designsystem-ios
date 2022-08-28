@@ -27,6 +27,16 @@ public struct TDSViewButton<Content: View>: View {
         .buttonStyle(TDSViewButtonStyle(styleStateSet: styleStateSet,
                                             isEnabled: isEnabled))
     }
+    
+    // MARK: - Public API
+    
+    public init(content: Content,
+                action: () -> () = {},
+                styleStateSet: TDSStyleStateSet) {
+        self.content = content
+        self.action = action
+        self.styleStateSet = styleStateSet
+    }
 }
 
 
