@@ -70,7 +70,7 @@ public enum TDSFontWeight: String, Codable {
     }
     
     // TODOCARL: explore all possibilities
-    init?(figmaString: String) {
+    public init?(figmaString: String) {
         self.init(rawValue: figmaString.lowercased())
     }
 }
