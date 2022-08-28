@@ -7,18 +7,18 @@ public class Appearance {
     // MARK: - Spacings
 
     public class Spacing {
-        public static let _5xl = 80
-        public static let _4xl = 72
-        public static let _3xl = 64
-        public static let _2xl = 56
-        public static let _xl = 48
-        public static let _l = 40
-        public static let _m = 32
-        public static let _s = 24
-        public static let _xs = 16
-        public static let _2xs = 12
-        public static let _3xs = 8
-        public static let _4xs = 4
+        public static let _5xl: CGFloat = 80
+        public static let _4xl: CGFloat = 72
+        public static let _3xl: CGFloat = 64
+        public static let _2xl: CGFloat = 56
+        public static let _xl: CGFloat = 48
+        public static let _l: CGFloat = 40
+        public static let _m: CGFloat = 32
+        public static let _s: CGFloat = 24
+        public static let _xs: CGFloat = 16
+        public static let _2xs: CGFloat = 12
+        public static let _3xs: CGFloat = 8
+        public static let _4xs: CGFloat = 4
     }
 
     // MARK: - Colors

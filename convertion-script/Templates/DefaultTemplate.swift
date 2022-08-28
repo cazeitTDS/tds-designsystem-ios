@@ -1,1 +1,1 @@
-        public static let #variableName = #variableValue
+        public static let #variableName: #variableType = #variableValue

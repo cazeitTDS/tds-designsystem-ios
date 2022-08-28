@@ -40,7 +40,7 @@ function addObjectToTemplate(object, objectName, tokensObject, templateString) {
 
         case "spacing":
             var modifiedName = objectName.replace("spacing", "");
-            stringToInsert = buildSwiftStringForTemplate(object, modifiedName, "Templates/DefaultTemplate.swift");
+            stringToInsert = buildSwiftStringForTemplate(object, modifiedName, "Templates/DefaultTemplate.swift", "CGFloat");
             searchString = "public class Spacing {";
             break;
             
@@ -66,13 +66,14 @@ function insertString(stringToInsert, string, searchString) {
     return retVal;
 }
 
-function buildSwiftStringForTemplate(object, objectName, templateFileName) {
+function buildSwiftStringForTemplate(object, objectName, templateFileName, variableType = "") {
     var retVal = fs.readFileSync(templateFileName).toString();
 
     let objectValue = addParanthesisIfNeeded(object.value);
     
     retVal = retVal.replace("#variableName", objectName);
     retVal = retVal.replace("#variableValue", objectValue);
+    retVal = retVal.replace("#variableType", variableType);
 
     return retVal;
 }
