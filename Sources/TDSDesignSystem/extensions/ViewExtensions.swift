@@ -25,6 +25,7 @@ extension View {
             .multilineTextAlignment(style.textAlignment.textAlignment)
             .lineLimit(style.maxTextLines)
             .padding(style.padding.edgeInsets)
+            .cornerRadius(style.cornerRadius)
             .background(background)
             .padding(style.border.insets.edgeInsets)
             .overlay(overlay)
