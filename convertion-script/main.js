@@ -51,11 +51,13 @@ function addTokenToSwiftString(object, objectName, tokensObject, swiftString) {
 
     switch (object.type) {
         case "typography":
+            objectNameToUse = objectName.replace("typography_", "");
             stringToInsert = buildSwiftStringForTemplateWithPropertyLookup(object, objectNameToUse, tokensObject, "Templates/TextTemplate.swift");
             className = "Text";
             break;
 
         case "color":
+            objectNameToUse = objectName.replace("color_", "");
             stringToInsert = buildSwiftStringForTemplate(object, objectNameToUse, "Templates/ColorTemplate.swift");
             className = "Color";
             break;
