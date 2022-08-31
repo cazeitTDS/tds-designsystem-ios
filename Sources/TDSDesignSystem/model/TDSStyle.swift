@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-public struct TDSStyle: Codable {
+public struct TDSStyle: Codable, Combinable {
     
     // MARK: - Types
     

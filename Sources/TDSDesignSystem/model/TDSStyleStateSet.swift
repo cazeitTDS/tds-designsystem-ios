@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
-public struct TDSStyleStateSet: Codable {
+public struct TDSStyleStateSet: Codable, Combinable {
     
     // MARK: - Types
     
@@ -90,7 +91,31 @@ public struct TDSStyleStateSet: Codable {
         return retVal
     }
     
-    public func combine(withSet styleStateSet: TDSStyleStateSet?) -> TDSStyleStateSet {
+    public func combine(foregroundColor: TDSColor? = nil,
+                        backgroundColor: TDSColor? = nil,
+                        cornerRadius: CGFloat? = nil,
+                        padding: TDSEdgeInsets? = nil,
+                        margin: TDSEdgeInsets? = nil,
+                        border: TDSBorderData? = nil,
+                        tdsFont: TDSFontData? = nil,
+                        textAlignment: TDSTextAlignment? = nil,
+                        maxTextLines: Int? = nil,
+                        shadow: TDSShadow? = nil) -> TDSStyleStateSet {
+        let style = TDSStyle(foregroundColor: foregroundColor,
+                             backgroundColor: backgroundColor,
+                             cornerRadius: cornerRadius,
+                             padding: padding,
+                             margin: margin,
+                             border: border,
+                             tdsFont: tdsFont,
+                             textAlignment: textAlignment,
+                             maxTextLines: maxTextLines,
+                             shadow: shadow)
+        
+        return self.combine(withStyle: style)
+    }
+    
+    public func combine(with styleStateSet: TDSStyleStateSet?) -> TDSStyleStateSet {
         let `default` = self.default.combine(with: styleStateSet?.default)
         let pressed = self.pressed.combine(with: styleStateSet?.pressed)
         let disabled = self.disabled.combine(with: styleStateSet?.disabled)
@@ -102,13 +127,13 @@ public struct TDSStyleStateSet: Codable {
                                 focused: focused)
     }
     
-    public func combine(with style: TDSStyle?) -> TDSStyleStateSet {
+    public func combine(withStyle style: TDSStyle?) -> TDSStyleStateSet {
         guard let style = style else {
-            return self.combine(withSet: nil)
+            return self.combine(with: nil)
         }
         
         let styleStateSet = TDSStyleStateSet(value: style)
         
-        return self.combine(withSet: styleStateSet)
+        return self.combine(with: styleStateSet)
     }
 }
