@@ -29,7 +29,7 @@ public struct TDSText: View {
     // MARK: - Public API
     
     public init(_ text: String,
-                style: TDSStyle,
+                style: TDSStyle = TDSStyle(),
                 fixedHorizontalSize: Bool = false,
                 fixedVerticalSize: Bool = false) {
         self.text = text

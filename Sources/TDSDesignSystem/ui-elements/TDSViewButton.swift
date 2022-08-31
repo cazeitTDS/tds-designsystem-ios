@@ -32,7 +32,7 @@ public struct TDSViewButton<Content: View>: View {
     
     public init(content: Content,
                 action: @escaping () -> () = {},
-                styleStateSet: TDSStyleStateSet) {
+                styleStateSet: TDSStyleStateSet = TDSStyleStateSet(value: TDSStyle())) {
         self.content = content
         self.action = action
         self.styleStateSet = styleStateSet

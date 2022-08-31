@@ -42,7 +42,7 @@ public struct TDSIcon: View {
     // MARK: - Public API
     
     public init(iconData: TDSIconData,
-                styleStateSet: TDSStyleStateSet,
+                styleStateSet: TDSStyleStateSet = TDSStyleStateSet(value: TDSStyle()),
                 contentMode: ContentMode = .fit,
                 renderingMode: Image.TemplateRenderingMode = .template) {
         self.init(iconData: iconData,
@@ -52,7 +52,7 @@ public struct TDSIcon: View {
     }
     
     public init(iconData: TDSIconData,
-                style: TDSStyle,
+                style: TDSStyle = TDSStyle(),
                 contentMode: ContentMode = .fit,
                 renderingMode: Image.TemplateRenderingMode = .template) {
         self.iconData = iconData

@@ -39,7 +39,7 @@ public struct TDSButton: View {
     // MARK: - Public API
     
     public init(title: String,
-                styleStateSet: TDSStyleStateSet,
+                styleStateSet: TDSStyleStateSet = TDSStyleStateSet(value: TDSStyle()),
                 iconData: TDSIconData? = nil,
                 iconPosition: TDSIconPosition? = nil,
                 iconInsets: TDSEdgeInsets = TDSEdgeInsets(value: 0),
