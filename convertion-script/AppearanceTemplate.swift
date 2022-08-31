@@ -45,8 +45,13 @@ public class Appearance {
     public class Button {
     }
     
-    // MARK: - Organisms
+    // MARK: - Molecules
     
+    public class Molecules {
+    }
+
+    // MARK: - Organisms
+
     public class Organisms {
     }
 }
