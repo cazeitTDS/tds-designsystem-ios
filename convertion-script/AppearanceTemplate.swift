@@ -39,19 +39,4 @@ public class Appearance {
 
     public class Text {
     }
-    
-    // MARK: - Buttons
-    
-    public class Button {
-    }
-    
-    // MARK: - Molecules
-    
-    public class Molecules {
-    }
-
-    // MARK: - Organisms
-
-    public class Organisms {
-    }
 }
