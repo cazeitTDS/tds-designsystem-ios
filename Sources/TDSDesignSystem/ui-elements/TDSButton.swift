@@ -35,6 +35,22 @@ public struct TDSButton: View {
         Button("", action: action)
             .buttonStyle(buttonStyle)
     }
+    
+    // MARK: - Public API
+    
+    public init(title: String,
+                styleStateSet: TDSStyleStateSet = TDSStyleStateSet(value: TDSStyle()),
+                iconData: TDSIconData? = nil,
+                iconPosition: TDSIconPosition? = nil,
+                iconInsets: TDSEdgeInsets = TDSEdgeInsets(value: 0),
+                action: (@escaping () -> Void) = {}) {
+        self.title = title
+        self.styleStateSet = styleStateSet
+        self.iconData = iconData
+        self.iconPosition = iconPosition
+        self.iconInsets = iconInsets
+        self.action = action
+    }
 }
 
 fileprivate struct TDSButtonStyle: ButtonStyle {
@@ -57,13 +73,14 @@ fileprivate struct TDSButtonStyle: ButtonStyle {
             iconViewForPosition(iconPosition: .left)
             
             Text(title)
-                .styleText(styleStateSet,
-                           isEnabled: isEnabled,
-                           isHighlighted: configuration.isPressed)
+                .applyTextStyleStateSet(styleStateSet,
+                                        isEnabled: isEnabled,
+                                        isHighlighted: configuration.isPressed)
             
             iconViewForPosition(iconPosition: .right)
-        }.styleView(styleStateSet, isEnabled: isEnabled,
-                    isHighlighted: configuration.isPressed)
+        }.applyStyleStateSet(styleStateSet,
+                             isEnabled: isEnabled,
+                             isHighlighted: configuration.isPressed)
     }
     
     // MARK: - Public API

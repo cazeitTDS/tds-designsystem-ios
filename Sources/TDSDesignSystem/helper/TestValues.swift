@@ -48,8 +48,12 @@ class TestValues {
     }
     
     static var buttonStyleSet: TDSStyleStateSet {
+        let highlightedBorder = TDSBorderData(color: TDSColor.black,
+                                             width: 2,
+                                             cornerRadius: 5,
+                                                 insets: TDSEdgeInsets(value: -2))
         let disabledStyle = buttonStyle.combine(backgroundColor: TDSColor(hexValue: "#808080"))
-        let highlightedStyle = buttonStyle.combine(foregroundColor: TDSColor(hexValue: "#0000FF"), padding: TDSEdgeInsets(value: 20))
+        let highlightedStyle = buttonStyle.combine(foregroundColor: TDSColor(hexValue: "#0000FF"), padding: TDSEdgeInsets(value: 20), border: highlightedBorder)
         
         return TDSStyleStateSet(default: buttonStyle,
                                 pressed: highlightedStyle,
@@ -57,10 +61,6 @@ class TestValues {
     }
     
     private static var buttonStyle: TDSStyle {
-        let border = TDSBorderData(color: TDSColor.black,
-                               width: 2,
-                               cornerRadius: 5)
-        
         let font = TDSFontData(size: 20,
                            weight: .medium)
         
@@ -70,8 +70,8 @@ class TestValues {
         
         return TDSStyle(foregroundColor: TDSColor(hexValue: "#8B0000"),
                         backgroundColor: TDSColor(hexValue: "#F1EB9C"),
+                        cornerRadius: 5,
                         padding: TDSEdgeInsets(value: 15),
-                        border: border,
                         tdsFont: font,
                         maxTextLines: 1,
                         shadow: shadow)

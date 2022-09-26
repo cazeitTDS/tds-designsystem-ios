@@ -36,7 +36,29 @@ public struct TDSIcon: View {
                          contentMode: contentMode)
             .frame(width: iconData.width,
                    height: iconData.height)
-            .styleView(style)
+            .applyStyle(style)
+    }
+    
+    // MARK: - Public API
+    
+    public init(iconData: TDSIconData,
+                styleStateSet: TDSStyleStateSet,
+                contentMode: ContentMode = .fit,
+                renderingMode: Image.TemplateRenderingMode = .template) {
+        self.init(iconData: iconData,
+                  style: styleStateSet.default,
+                  contentMode: contentMode,
+                  renderingMode: renderingMode)
+    }
+    
+    public init(iconData: TDSIconData,
+                style: TDSStyle = TDSStyle(),
+                contentMode: ContentMode = .fit,
+                renderingMode: Image.TemplateRenderingMode = .template) {
+        self.iconData = iconData
+        self.style = style
+        self.contentMode = contentMode
+        self.renderingMode = renderingMode
     }
 }
 

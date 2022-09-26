@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TDSIconPosition: String, Codable {
+public enum TDSIconPosition: String, Codable {
     case left
     case right
 }

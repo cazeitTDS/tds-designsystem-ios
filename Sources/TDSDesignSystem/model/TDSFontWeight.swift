@@ -9,43 +9,67 @@ import Foundation
 import SwiftUI
 
 public enum TDSFontWeight: String, Codable {
-    
-    case bold
-    case semibold
-    case medium
+    case ultraLight
+    case thin
+    case light
     
     case regular
-    case light
+    case medium
+    case semibold
+    
+    case bold
+    case heavy
+    case black
     
     // MARK: - Properties
     
     public var weight: Font.Weight {
         switch self {
-            case .bold:
-                return .bold
-            case .semibold:
-                return .semibold
-            case .medium:
-                return .medium
-            case .regular:
-                return .regular
+            case .ultraLight:
+                return .ultraLight
+            case .thin:
+                return .thin
             case .light:
                 return .light
+            case .regular:
+                return .regular
+            case .medium:
+                return .medium
+            case .semibold:
+                return .semibold
+            case .bold:
+                return .bold
+            case .heavy:
+                return .heavy
+            case .black:
+                return .black
         }
     }
     
     public var uiFontWeight: UIFont.Weight {
         switch self {
-            case .bold:
-                return .bold
-            case .semibold:
-                return .semibold
-            case .medium:
-                return .medium
-            case .regular:
-                return .regular
+            case .ultraLight:
+                return .ultraLight
+            case .thin:
+                return .thin
             case .light:
                 return .light
+            case .regular:
+                return .regular
+            case .medium:
+                return .medium
+            case .semibold:
+                return .semibold
+            case .bold:
+                return .bold
+            case .heavy:
+                return .heavy
+            case .black:
+                return .black
         }
+    }
+    
+    public static func fromFigmaString(_ figmaString: String) -> TDSFontWeight {
+        return self.init(rawValue: figmaString.lowercased()) ?? .medium
     }
 }
