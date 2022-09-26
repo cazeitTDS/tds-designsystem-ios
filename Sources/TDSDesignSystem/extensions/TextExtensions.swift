@@ -9,26 +9,26 @@ import Foundation
 import SwiftUI
 
 extension Text {
-    public func style(_ style: TDSStyle) -> some View {
-        return self.styleText(style)
-            .styleView(style)
+    public func applyStyle(_ style: TDSStyle) -> some View {
+        return self.applyTextStyle(style)
+            .applyStyle(style)
     }
     
-    public func style(_ styleSet: TDSStyleStateSet,
-                      isEnabled: Bool = true,
-                      isHighlighted: Bool = false,
-                      isFocused: Bool = false) -> some View {
+    public func applyStyleStateSet(_ styleSet: TDSStyleStateSet,
+                                   isEnabled: Bool = true,
+                                   isHighlighted: Bool = false,
+                                   isFocused: Bool = false) -> some View {
         let style = styleSet.style(isEnabled: isEnabled,
                                    isHighlighted: isHighlighted,
                                    isFocused: isFocused)
         
-        return self.style(style)
+        return self.applyStyle(style)
     }
     
     /*
      Only style the properties from the style object that are unique to text
      */
-    func styleText(_ style: TDSStyle) -> some View {
+    func applyTextStyle(_ style: TDSStyle) -> some View {
         return self.tracking(style.tdsFont.letterSpacing)
             .font(style.tdsFont.font)
     }
@@ -36,14 +36,14 @@ extension Text {
     /*
      Only style the properties from the style object that are unique to text according to the views state
      */
-    func styleText(_ styleSet: TDSStyleStateSet,
-                   isEnabled: Bool = true,
-                   isHighlighted: Bool = false,
-                   isFocused: Bool = false) -> some View {
+    func applyTextStyleStateSet(_ styleSet: TDSStyleStateSet,
+                                isEnabled: Bool = true,
+                                isHighlighted: Bool = false,
+                                isFocused: Bool = false) -> some View {
         let style = styleSet.style(isEnabled: isEnabled,
                                    isHighlighted: isHighlighted,
                                    isFocused: isFocused)
         
-        return self.styleText(style)
+        return self.applyTextStyle(style)
     }
 }

@@ -73,13 +73,14 @@ fileprivate struct TDSButtonStyle: ButtonStyle {
             iconViewForPosition(iconPosition: .left)
             
             Text(title)
-                .styleText(styleStateSet,
-                           isEnabled: isEnabled,
-                           isHighlighted: configuration.isPressed)
+                .applyTextStyleStateSet(styleStateSet,
+                                        isEnabled: isEnabled,
+                                        isHighlighted: configuration.isPressed)
             
             iconViewForPosition(iconPosition: .right)
-        }.styleView(styleStateSet, isEnabled: isEnabled,
-                    isHighlighted: configuration.isPressed)
+        }.applyStyleStateSet(styleStateSet,
+                             isEnabled: isEnabled,
+                             isHighlighted: configuration.isPressed)
     }
     
     // MARK: - Public API

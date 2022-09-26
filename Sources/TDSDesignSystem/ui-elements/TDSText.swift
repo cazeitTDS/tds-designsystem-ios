@@ -21,7 +21,7 @@ public struct TDSText: View {
     
     public var body: some View {
         Text(text)
-            .style(style)
+            .applyStyle(style)
             .fixedSize(horizontal: fixedHorizontalSize,
                        vertical: fixedVerticalSize)
     }

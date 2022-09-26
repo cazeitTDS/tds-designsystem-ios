@@ -36,7 +36,7 @@ public struct TDSIcon: View {
                          contentMode: contentMode)
             .frame(width: iconData.width,
                    height: iconData.height)
-            .styleView(style)
+            .applyStyle(style)
     }
     
     // MARK: - Public API

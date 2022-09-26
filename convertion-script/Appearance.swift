@@ -13,8 +13,10 @@ public class Appearance {
     // MARK: - Sizes
     
     public class Size {
-        public static let buttonIconSize: CGFloat = 24
-        public static let feedCardHeight: CGFloat = 160
+        public static let m: CGFloat = 96
+        public static let s: CGFloat = 48
+        public static let xs: CGFloat = 24
+        public static let l: CGFloat = 160
     }
     
     // MARK: - Spacings
@@ -37,8 +39,10 @@ public class Appearance {
     // MARK: - Corner Radius
     
     public class CornerRadius {
-        public static let button: CGFloat = 4
-        public static let feedCard: CGFloat = 8
+        public static let l: CGFloat = 16
+        public static let m: CGFloat = 12
+        public static let xs: CGFloat = 4
+        public static let s: CGFloat = 8
     }
 
     // MARK: - Border Width
@@ -335,139 +339,5 @@ public class Appearance {
             return TDSStyleStateSet(value: style)
         }()
 
-    }
-       
-    public class Button {
-        
-        public static let example: TDSStyleStateSet = {
-            return TDSDesignSystem.sharedInstance.styles?["example-button"] ?? TDSStyleStateSet(value: TDSStyle())
-        }()
-        
-        private static let base: TDSStyle = {
-            let fontData = Appearance.Text.button.default.tdsFont
-            return TDSStyle(cornerRadius: 4,
-                            padding: TDSEdgeInsets(top: Appearance.Spacing._3xs,
-                                                   left: Appearance.Spacing._xs,
-                                                   bottom: Appearance.Spacing._3xs,
-                                                   right: Appearance.Spacing._xs),
-                            tdsFont: fontData, maxTextLines: 1)
-        }()
-        
-        private static let disabled: TDSStyle = {
-            return base.combine(foregroundColor: Appearance.Color.secondary300,
-                                backgroundColor: Appearance.Color.secondary50)
-        }()
-        
-        public static let primary: TDSStyleStateSet = {
-            let pressedBorderData = TDSBorderData(color: Appearance.Color.primary700,
-                                                  width: 2, cornerRadius: 5,
-                                                  insets: TDSEdgeInsets(value: -2))
-            
-            let `default` = base.combine(foregroundColor: Appearance.Color.secondary900, backgroundColor: Appearance.Color.primary400)
-            let pressed = `default`.combine(border: pressedBorderData)
-            let disabled = Appearance.Button.disabled
-            
-            return TDSStyleStateSet(default: `default`, pressed: pressed, disabled: disabled)
-        }()
-        
-        public static let primaryIconRight: TDSStyleStateSet = {
-            let adjustedPadding = TDSEdgeInsets(top: Appearance.Spacing._3xs,
-                                                 left: Appearance.Spacing._xs,
-                                                 bottom: Appearance.Spacing._3xs,
-                                                 right: Appearance.Spacing._3xs)
-            
-            return primary.combine(with: TDSStyle(padding: adjustedPadding))
-        }()
-        
-        public static let primaryIconLeft: TDSStyleStateSet = {
-            let adjustedPadding = TDSEdgeInsets(top: Appearance.Spacing._3xs,
-                                                 left: Appearance.Spacing._3xs,
-                                                 bottom: Appearance.Spacing._3xs,
-                                                 right: Appearance.Spacing._xs)
-            
-            return primary.combine(with: TDSStyle(padding: adjustedPadding))
-        }()
-        
-        public static let secondary: TDSStyleStateSet = {
-            let pressedBorderData = TDSBorderData(color: Appearance.Color.secondary300,
-                                                  width: 2, cornerRadius: 5,
-                                                  insets: TDSEdgeInsets(value: -2))
-            
-            let `default` = base.combine(foregroundColor: Appearance.Color.white,
-                                         backgroundColor: Appearance.Color.secondary900)
-            let pressed = `default`.combine(border: pressedBorderData)
-            let disabled = Appearance.Button.disabled
-            
-            return TDSStyleStateSet(default: `default`, pressed: pressed, disabled: disabled)
-        }()
-        
-        public static let secondaryIconLeft: TDSStyleStateSet = {
-            let adjustedPadding = TDSEdgeInsets(top: Appearance.Spacing._3xs,
-                                                 left: Appearance.Spacing._3xs,
-                                                 bottom: Appearance.Spacing._3xs,
-                                                 right: Appearance.Spacing._xs)
-            
-            return secondary.combine(with: TDSStyle(padding: adjustedPadding))
-        }()
-        
-        public static let secondaryIconRight: TDSStyleStateSet = {
-            let adjustedPadding = TDSEdgeInsets(top: Appearance.Spacing._3xs,
-                                                 left: Appearance.Spacing._xs,
-                                                 bottom: Appearance.Spacing._3xs,
-                                                 right: Appearance.Spacing._3xs)
-            
-            return secondary.combine(with: TDSStyle(padding: adjustedPadding))
-        }()
-        
-        public static let tertiary: TDSStyleStateSet = {
-            let defaultBorderData = TDSBorderData(color: Appearance.Color.blueGray300,
-                                                  width: 2,
-                                                  cornerRadius: 5)
-            let pressedBorderData = TDSBorderData(color: Appearance.Color.blueGray700,
-                                                  width: 2,
-                                                  cornerRadius: 5)
-            
-            let `default` = base.combine(foregroundColor: Appearance.Color.blueGray700,
-                                         backgroundColor: Appearance.Color.white,
-                                         border: defaultBorderData)
-            let pressed = `default`.combine(border: pressedBorderData)
-            let disabled = Appearance.Button.disabled
-            
-            return TDSStyleStateSet(default: `default`, pressed: pressed, disabled: disabled)
-        }()
-        
-        public static let tertiaryIconLeft: TDSStyleStateSet = {
-            let adjustedPadding = TDSEdgeInsets(top: Appearance.Spacing._3xs,
-                                                 left: Appearance.Spacing._3xs,
-                                                 bottom: Appearance.Spacing._3xs,
-                                                 right: Appearance.Spacing._xs)
-            
-            return tertiary.combine(with: TDSStyle(padding: adjustedPadding))
-        }()
-        
-        public static let tertiaryIconRight: TDSStyleStateSet = {
-            let adjustedPadding = TDSEdgeInsets(top: Appearance.Spacing._3xs,
-                                                 left: Appearance.Spacing._xs,
-                                                 bottom: Appearance.Spacing._3xs,
-                                                 right: Appearance.Spacing._3xs)
-            
-            return tertiary.combine(with: TDSStyle(padding: adjustedPadding))
-        }()
-    }
-    
-    // MARK: - Organisms
-    
-    public class Organisms {
-        public static let baseCard: TDSStyleStateSet = {
-            let style = TDSStyle(cornerRadius: Appearance.CornerRadius.feedCard,
-                                 margin: TDSEdgeInsets(value: Appearance.Spacing._xs),
-                                 border: TDSBorderData(color: Appearance.Color.blueGray200,
-                                                       width: Appearance.BorderWidth.feedCard,
-                                                       cornerRadius: Appearance.CornerRadius.feedCard))
-            
-            let pressedStyle = style.combine(padding: TDSEdgeInsets(value: -3))
-            
-            return TDSStyleStateSet(default: style, pressed: pressedStyle)
-        }()
     }
 }

@@ -50,8 +50,8 @@ public struct TDSViewButtonStyle: ButtonStyle {
     // MARK: - Body
     
     public func makeBody(configuration: Configuration) -> some View {
-        configuration.label.styleView(styleStateSet,
-                                      isEnabled: isEnabled,
-                                      isHighlighted: configuration.isPressed)
+        configuration.label.applyStyleStateSet(styleStateSet,
+                                               isEnabled: isEnabled,
+                                               isHighlighted: configuration.isPressed)
     }
 }
