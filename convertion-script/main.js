@@ -1,4 +1,12 @@
 // Global
+/*
+ Use Figma Tokens to export the tokens in the UI. Make sure to deselect "Include parent key".
+ Save the file in the same directory as the script as "tokens.json"
+ This script reads a file named tokens.json from the same file directory and outputs a Swift-file named Appearance.swift that can be used with the TDSDesignSystem
+ 
+ Make sure to have node.js installed before trying to run. Run by executing command "node ./main.js"
+ 
+*/
 
 let fs = require("fs");
  
@@ -91,7 +99,7 @@ function addTokenToSwiftString(object, objectName, tokensObject, swiftString) {
             let value = addParanthesisIfNeeded(object.value);
 
             let retVal = swiftString.replace(`#${objectNameToUse}`, value);
-            console.log(`Replacing #${objectNameToUse}  with ${value}`);
+            // console.log(`Replacing #${objectNameToUse}  with ${value}`);
             return retVal;
     }
 
@@ -130,8 +138,8 @@ function insertString(stringToInsert, string, objectName, className, startSearch
         stringToUse = removeResult.newString;
     }
     else {
-        console.log("Was not in class range:" + objectName);
-        console.log("ClassName: " + className + "Position: " + writePosition + " " + classRange.startPosition + " " + classRange.endPosition);
+        // console.log("Was not in class range:" + objectName);
+        // console.log("ClassName: " + className + "Position: " + writePosition + " " + classRange.startPosition + " " + classRange.endPosition);
         // check if there is another occurence in the document
         return insertString(stringToInsert, string, objectName, className, writePosition + 1);
     }
